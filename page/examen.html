@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Isai Aleman Calderon">
+    <title>Examen 2</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="css/starter-template.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="index.html">Examen de Musica</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <!-- <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+           -->
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+           -->
+        </ul>
+
+        <!-- <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+         -->
+      </div>
+    </nav>
+
+    <main role="main" class="container">
+      <div class="panel-examen">
+        <h4 class="mb-2">Pregunta: <span id="num1">0</span> de <span id="num2">5</span> </h4>
+        <!-- <form class="needs-validation" novalidate=""> -->
+          <div class="d-block my-3 form-group">
+            <label id="titulo-pregunta">titulo</label>
+            <div>
+              <img id="img" src="img/img1.png">
+            </div>
+            <div class="form-check" onclick="seleccionador(1)">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="radio1" value="1" required="">
+              <label name="option" class="form-check-label" for="radio1">-</label>
+            </div>
+            <div class="form-check" onclick="seleccionador(2)">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="radio2" value="2" required="">
+              <label name="option" class="form-check-label" for="radio2">-</label>
+            </div>
+            <div class="form-check" onclick="seleccionador(3)">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="radio3" value="3" required="">
+              <label name="option" class="form-check-label" for="radio3">-</label>
+            </div>
+            <div class="form-check" onclick="seleccionador(4)">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="radio4" value="4" required="">
+              <label name="option" class="form-check-label" for="radio4">-</label>
+            </div>
+          </div>
+          <button id="boton1" class="btn btn-primary" onclick="next()">Siguente</button>
+        <!-- </form> -->
+        
+      </div>
+
+      <div class="panel-examen panel-res">
+        <p id="resultado">Resultado:</p>
+        <p id="aciertos"></p>
+        <p id="info"></p> 
+      </div>
+
+      <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">&copy; 2019 Isai Aleman, Jorgue Borquez, Ernesto Alfonso</p>
+        <!-- <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">Privacy</a></li>
+          <li class="list-inline-item"><a href="#">Terms</a></li>
+          <li class="list-inline-item"><a href="#">Support</a></li>
+        </ul>
+         -->
+      </footer>
+
+    </main><!-- /.container -->
+
+  <script src="js/jquery-3.3.1.slim.min.js"></script>
+
+  <script src="js/preguntas.js"></script>
+    
+  <script>window.jQuery || document.write('<script src="js/jquery-slim.min.js"><\/script>')</script>
+  <script src="js/bootstrap.bundle.min.js"></script></body>
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>Login</title>
+    
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://github.com/isaicalderon/ExamenMusica/blob/master/css/index.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link type="text/css" src="css/signin.css">
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/4.3/examples/sign-in/signin.css">
+  </head>
+  <body class="text-center">
+    <form class="form-signin" action="/verificar" method="post">
+      <img class="mb-4" src="img/login.png" alt="" width="200" height="200">
+      <h1 class="h3 mb-3 font-weight-normal">Login</h1>
+      <label for="inputEmail" class="sr-only">Usuario</label>
+      <input type="text" id="inputEmail" name="user" class="form-control" placeholder="Usuario" required autofocus>
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
+      <div class="checkbox mb-3">
+      <!-- <label>
+      <input type="checkbox" value="remember-me"> Remember me
+      </label>
+      -->
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Iniciar</button>
+      <p class="mt-5 mb-3 text-muted">&copy; 2019 Isai Aleman, Jorgue Borquez, Ernesto Alfonso</p>
+    </form>
+  </body>
+</html>

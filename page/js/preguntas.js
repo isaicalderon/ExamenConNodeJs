@@ -6,6 +6,9 @@ var resultado 	= document.getElementById('resultado');
 var boton 		= document.getElementById('boton1');
 var aciertos  	= document.getElementById('aciertos');
 var info		= document.getElementById('info');
+var pts 		= document.getElementById('puntos');
+var exm 		= document.getElementById('exm');
+var form1 		= document.getElementById('form1');
 var opciones 	= document.getElementsByName('option');
 var radio_res 	= document.getElementsByName('exampleRadios'); 
 
@@ -323,31 +326,43 @@ var preguntasHistoria = [
 	}
 ];
 
-definirExamen(preguntasMusica, 1);
+
+//definirExamen(value);
 
 refresh();
 
-function definirExamen(examen, data) {
-	preguntas = examen
+function definirExamen(data) {
 	var str = "" 
+	//console.log("data: "+data)
+	exm.setAttribute('value', data)
+	
 	switch(data){
-		case 1:
+		case "1":
 			str = "Examen de Musica";
+			examen = preguntasMusica
 			break;
-		case 2:
+		case "2":
 			str = "Examen de Matemáticas";
+			examen = preguntasMate
 			break;
-		case 3:
+		case "3":
 			str = "Examen de Español";
+			examen = preguntasEspa
 			break;
-		case 4:
+		case "4":
 			str = "Examen de Historia";
+			examen = preguntasHistoria
 			break;
-		case 5:
+		case "5":
 			str = "Examen de Conocimientos Generales";
+			examen = preguntasCono
 			break;	
+		default:
+			//window.location.href="home.html";
 	}
+	preguntas = examen;
 	tituloNav.innerText = str;
+	refresh()
 }
 
 function refresh(){
@@ -396,14 +411,18 @@ function calificar() {
 	var cont = 0;
 	for (var i = 0; i < 5; i++){
 		//tmp += ", "+preguntas[i].seleccion;  
-		console.log("sel: "+preguntas[i].seleccion+", res: "+preguntas[i].res);
+		//console.log("sel: "+preguntas[i].seleccion+", res: "+preguntas[i].res);
 		if (preguntas[i].seleccion == preguntas[i].res) {
 			cont++;
 		}
 	}
 	var res = (cont / 5) * 100;
-	console.log(cont);
+	//console.log(cont);
 
+	pts.setAttribute('value', res)
+
+	form1.submit()
+	/*
 	resultado.innerHTML = "Tu calificacion es de: "+res+" Puntos";
 	aciertos.innerHTML = "Aciertos: "+cont+" de 5";
 	var infoTmp = "";
@@ -414,5 +433,15 @@ function calificar() {
 		+"<br><br>";
 	}
 	info.innerHTML = infoTmp;
+	*/
+}
 
+function getParameterByName(name, url) {
+	if (!url) url = window.location.href;
+	name = name.replace(/[\[\]]/g, '\\$&');
+	var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+		results = regex.exec(url);
+	if (!results) return null;
+	if (!results[2]) return '';
+	return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }

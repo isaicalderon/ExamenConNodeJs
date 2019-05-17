@@ -34,12 +34,13 @@
   </head>
   <body style="background-color: #ecf0f1">
     <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="box-shadow: 0 0 10px;background: #16a085;">  
-      <a class="navbar-brand" href="home.html" ><i class="fas fa-home"></i> Home</a>
+      <a class="navbar-brand" href="/home" ><i class="fas fa-home"></i> Home</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          
         <ul class="navbar-nav mr-auto">
           <!-- <li class="nav-item active">
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
@@ -68,10 +69,16 @@
         </form>
          -->
       </div>
+      <ul class="navbar-nav px-3">
+            <li class="nav-item text-nowrap">
+                <a class="nav-link" href="/logout">Log out</a>
+            </li>
+          </ul>
     </nav>
 
     <main role="main" class="container">
-   
+        <h2> <%= user %> </h2>
+        <p>Promedio: <%= prom %> </p>
         <div class="row">
             <div class="col-md-6">
                 <div class="card mb-4 shadow-sm">
@@ -84,7 +91,7 @@
                             Musica
                         </h1>
                         <p class="card-text">
-                            Calificacion: <span>0</span>  
+                            Calificacion: <span> <%= musica %> </span>  
                         </p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
@@ -103,7 +110,7 @@
                           Matemáticas
                       </h1>
                       <p class="card-text">
-                          Calificacion: <span>0</span>  
+                          Calificacion: <span><%= mat %></span>  
                       </p>
                       <div class="d-flex justify-content-between align-items-center">
                           <div class="btn-group">
@@ -122,7 +129,7 @@
                           Español
                       </h1>
                       <p class="card-text">
-                          Calificacion: <span>0</span>  
+                          Calificacion: <span><%= esp %></span>  
                       </p>
                       <div class="d-flex justify-content-between align-items-center">
                           <div class="btn-group">
@@ -141,7 +148,7 @@
                           Historia
                       </h1>
                       <p class="card-text">
-                          Calificacion: <span>0</span>  
+                          Calificacion: <span><%= his %></span>  
                       </p>
                       <div class="d-flex justify-content-between align-items-center">
                           <div class="btn-group">
@@ -160,7 +167,7 @@
                           Conocimientos generale
                       </h1>
                       <p class="card-text">
-                          Calificacion: <span>0</span>  
+                          Calificacion: <span><%= cg %></span>  
                       </p>
                       <div class="d-flex justify-content-between align-items-center">
                           <div class="btn-group">
